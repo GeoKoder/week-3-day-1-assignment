@@ -74,7 +74,7 @@ const listings = [
 function findTopListings(listings, neighborhood, maxPrice) {
   const processedListings = listings
     .filter((listing) => listing.neighborhood === neighborhood)
-    .filter((listing) => listing.price < maxPrice)
+    .filter((listing) => listing.price <= maxPrice)
     .sort((a, b) => b.rating - a.rating)
     .slice(0, 5)
     .map(
